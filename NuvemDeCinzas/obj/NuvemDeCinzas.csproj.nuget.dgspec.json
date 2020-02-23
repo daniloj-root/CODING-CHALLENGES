@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\Conta Bancaria\\Conta Bancaria.csproj": {}
+    "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\NuvemDeCinzas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\Conta Bancaria\\Conta Bancaria.csproj": {
+    "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\NuvemDeCinzas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\Conta Bancaria\\Conta Bancaria.csproj",
-        "projectName": "Conta Bancaria",
-        "projectPath": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\Conta Bancaria\\Conta Bancaria.csproj",
+        "projectUniqueName": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\NuvemDeCinzas.csproj",
+        "projectName": "NuvemDeCinzas",
+        "projectPath": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\NuvemDeCinzas.csproj",
         "packagesPath": "C:\\Users\\Danilo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\Conta Bancaria\\obj\\",
+        "outputPath": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Danilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.0"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.0": {
+          "netcoreapp3.1": {
             "projectReferences": {}
           }
         },
@@ -36,7 +36,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.0": {
+        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",

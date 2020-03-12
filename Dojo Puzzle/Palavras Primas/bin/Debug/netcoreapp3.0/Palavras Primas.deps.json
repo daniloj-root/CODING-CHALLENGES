@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Palavras Primas/1.0.0": {
+        "runtime": {
+          "Palavras Primas.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Palavras Primas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

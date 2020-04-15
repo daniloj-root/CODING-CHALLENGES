@@ -1,4 +1,4 @@
-﻿namespace NuvemDeCinzas.Classes
+﻿namespace NuvemDeCinzas.Models
 {
     public class TipoQuadrado
     {

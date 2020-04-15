@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\NuvemDeCinzas.csproj": {}
+    "/home/danilokun/Documents/conumdrum/Dojo Puzzle/NuvemDeCinzas/NuvemDeCinzas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\NuvemDeCinzas.csproj": {
+    "/home/danilokun/Documents/conumdrum/Dojo Puzzle/NuvemDeCinzas/NuvemDeCinzas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\NuvemDeCinzas.csproj",
+        "projectUniqueName": "/home/danilokun/Documents/conumdrum/Dojo Puzzle/NuvemDeCinzas/NuvemDeCinzas.csproj",
         "projectName": "NuvemDeCinzas",
-        "projectPath": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\NuvemDeCinzas.csproj",
-        "packagesPath": "C:\\Users\\Danilo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\NuvemDeCinzas\\obj\\",
+        "projectPath": "/home/danilokun/Documents/conumdrum/Dojo Puzzle/NuvemDeCinzas/NuvemDeCinzas.csproj",
+        "packagesPath": "/home/danilokun/.nuget/packages/",
+        "outputPath": "/home/danilokun/Documents/conumdrum/Dojo Puzzle/NuvemDeCinzas/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Danilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/danilokun/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -52,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
         }
       }
     }

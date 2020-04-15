@@ -8,26 +8,24 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Danilo\\.nuget\\packages\\": {}
+    "/home/danilokun/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\Conta Bancaria\\Conta Bancaria.csproj",
+      "projectUniqueName": "/home/danilokun/Documents/conumdrum/Dojo Puzzle/Conta Bancaria/Conta Bancaria.csproj",
       "projectName": "Conta Bancaria",
-      "projectPath": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\Conta Bancaria\\Conta Bancaria.csproj",
-      "packagesPath": "C:\\Users\\Danilo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Danilo\\Documents\\Dojo Puzzle\\Conta Bancaria\\obj\\",
+      "projectPath": "/home/danilokun/Documents/conumdrum/Dojo Puzzle/Conta Bancaria/Conta Bancaria.csproj",
+      "packagesPath": "/home/danilokun/.nuget/packages/",
+      "outputPath": "/home/danilokun/Documents/conumdrum/Dojo Puzzle/Conta Bancaria/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Danilo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/danilokun/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
       ],
       "sources": {
-        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -53,12 +51,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.0.1, 3.0.1]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[3.0.3, 3.0.3]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -45,7 +45,7 @@ namespace NuvemDeCinzas {
                 
                 AvancarDia ();
             }
-            Console.WriteLine ("\nResultados!\n");
+            Console.WriteLine ("\nResultados:\n");
             Console.WriteLine ("Quantidade de aeroportos: {0}", qtdInicialAeroportos);
             Console.WriteLine ("Quantidade de dias para que o primeiro aeroporto fosse pego: {0}", qtdDiasPrimeiroAeroporto);
             Console.WriteLine ("Quantidade de dias para que todos os aeroportos fossem pegos: {0}", diasTotais);

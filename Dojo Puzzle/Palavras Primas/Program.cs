@@ -7,7 +7,6 @@ namespace Palavras_Primas {
         static void Main (string[] args) {
             // Cria uma array com o alfabeto maiúsculo e maiúsculo
             char[] arrayAlfabeto = new char[52];
-            int soma;
 
             int i = 0;
             for (char c = 'a'; c < 'z'; c++) {
@@ -50,21 +49,22 @@ namespace Palavras_Primas {
                                     string input = Console.ReadLine ();
                                     char[] arrayInput = input.ToCharArray ();
 
-                                    foreach (var letraInput in arrayInput) {
-                                        for (i = 0; i < arrayAlfabeto.Length; i++) {
-                                            if (letraInput == letraAlfabeto) {
-                                                soma += (i + 1);
+                                    int soma = 0;
+                                    if (TodosSaoLetras (arrayInput, arrayAlfabeto)) {
+                                        foreach (var letraInput in arrayInput) {
+                                            for (i = 0; i < arrayAlfabeto.Length; i++) {
+                                                if (letraInput == arrayAlfabeto[i]) {
+                                                    soma += (i + 1);
+                                                    System.Console.WriteLine (soma);
+                                                }
                                             }
                                         }
+                                        var resultado = (soma % 2) == 0 ? "não é primo" : " é primo";
+                                        System.Console.WriteLine ("Somando o que você digitou, posso dizer que '{0}' {1}.", input, resultado);
                                     }
-
-                                    var resultado = (soma % 2) == 0 ? "é primo" : "não é primo";
-
-                                    System.Console.WriteLine ("Somando o que você digitou, posso dizer que {0}, {1}.", input, resultado);
                                     System.Console.WriteLine ("Aperte ENTER para continuar");
                                     Console.ReadLine ();
                                     break;
-
                                 case "2":
                                     System.Console.WriteLine ("Cada letra tem seu respectivo valor.");
                                     System.Console.WriteLine ("'a' é 1, 'b' é 2, z é 26, 'A' é 27 e assim por diante.");
@@ -77,17 +77,12 @@ namespace Palavras_Primas {
                                     usuarioQuerFicarMenu = false;
                                     usuarioQuerUsar = false;
                                     break;
-                                default:
-
-                                    break;
                             }
                         } while (usuarioQuerFicarMenu == true);
                         break;
-
                     case "n":
                         usuarioQuerUsar = false;
                         break;
-
                     default:
                         Console.Clear ();
                         System.Console.WriteLine ("Você precisa escolher uma opção!");
@@ -97,5 +92,26 @@ namespace Palavras_Primas {
                 }
             }
         }
+
+        private static bool TodosSaoLetras (char[] arrayInput, char[] arrayAlfabeto) {
+            int i = 0;
+            foreach (var input in arrayInput) {
+                i = 0;
+                foreach (var letra in arrayAlfabeto) {
+                    if (input != letra) {
+                        i++;
+                    }
+                    if (i == 52) { // Verifica se o input não foi igual a nenhuma letra
+                        return Erro ("\nDigite apenas letras, pelo amor de Deus.\n");
+                    }
+                }
+            }
+            return true;
+        }
+
+        private static Func<string, bool> Erro = x => {
+            Console.WriteLine (x);
+            return false;
+        };
     }
 }

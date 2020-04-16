@@ -8,7 +8,7 @@ namespace NuvemDeCinzas.Libraries {
         {
             Coordenadas = new char[xLength, yLength];
 
-            Random random = new Random (Guid.NewGuid().GetHashCode());
+            Random random = new Random (Guid.NewGuid ().GetHashCode ());
             x = random.Next (0, xLength); // Entregar valor random para a posicao horizontal da array
 
             if (x == 0 || x == xLength - 1) // Verifica se x marca os cantos da array bidimensional
@@ -47,29 +47,28 @@ namespace NuvemDeCinzas.Libraries {
         }
 
         private bool MoverNuvem (int x, int y) {
-            Random random = new Random (Guid.NewGuid().GetHashCode());
+            Random random = new Random (Guid.NewGuid ().GetHashCode ());
             switch (random.Next (1, 5)) { // Decide pra qual direcao a nuvem vai
                 case 1:
-                    if (y != 0 && (Coordenadas[x, (y - 1)] == RetornarValor (TipoQuadrado.VAZIO))) //evita que o index saia dos limites da array e que uma nuvem seja sobrescrita
-                    {
+                    if (PodeMover (x, y - 1)) {
                         MoverPraCima ();
                         return true;
                     }
                     break;
                 case 2:
-                    if (y != yLength - 1 && (Coordenadas[x, (y + 1)] == RetornarValor (TipoQuadrado.VAZIO))) {
+                    if (PodeMover (x, y + 1)) {
                         MoverPraBaixo ();
                         return true;
                     }
                     break;
                 case 3:
-                    if (x != 0 && (Coordenadas[(x - 1), y] == RetornarValor (TipoQuadrado.VAZIO))) {
+                    if (PodeMover (x - 1, y)) {
                         MoverPraEsquerda ();
                         return true;
                     }
                     break;
                 case 4:
-                    if (x != xLength - 1 && (Coordenadas[(x + 1), y] == RetornarValor (TipoQuadrado.VAZIO))) {
+                    if (PodeMover (x + 1, y)) {
                         MoverPraDireita ();
                         return true;
                     }
@@ -78,8 +77,20 @@ namespace NuvemDeCinzas.Libraries {
             return false;
         }
 
+        /// Qualifica a movimentação impedindo com que nuvens sejam colocadas além dos limites da array
+        // Poderia ter sido feito com switch, no modelo PodeMover(int x, int y, string direcao)
+        // mas achei que deixaria mais complicado do que ajudaria na legibilidade
+        private bool PodeMover (int x, int y) {
+            if (x != 0 && x != (xLength - 1) && y != 0 && y != (yLength - 1)) {
+                if (Coordenadas[x, y] == RetornarValor (TipoQuadrado.VAZIO)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         protected void PreencherAeroportos () {
-            Random random = new Random (Guid.NewGuid().GetHashCode());
+            Random random = new Random (Guid.NewGuid ().GetHashCode ());
             var contadorAeroportos = 0;
 
             while (true) {
@@ -111,8 +122,8 @@ namespace NuvemDeCinzas.Libraries {
             }
         }
 
-        //// Cria um legado das posicoes preenchidas
-        // Evita com que uma nova nuvem seja contabilizada durante a iteracao
+        //// Cria um legado das posicões preenchidas
+        // Evita com que uma nova nuvem seja contabilizada durante a iteração
         private char[, ] CriarLegadoCoordenadas () {
             var coordenadasLegado = new char[xLength, yLength];
             for (var yIndex = 0; yIndex < yLength; yIndex++) {
@@ -124,7 +135,7 @@ namespace NuvemDeCinzas.Libraries {
         }
 
         private void PreencherVizinhosComNuvens (int xIndex, int yIndex) {
-            if (xIndex != 0) // evita os limites da array e checa se os blocos adjacentes estão vazios
+            if (xIndex != 0) // Evita os limites da array e checa se os blocos adjacentes estão vazios
                 Coordenadas[xIndex - 1, yIndex] = RetornarValor (TipoQuadrado.NUVEM);
 
             if (xIndex != xLength - 1)

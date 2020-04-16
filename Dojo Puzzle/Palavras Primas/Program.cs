@@ -19,7 +19,6 @@ namespace Palavras_Primas {
                 i++;
             }
 
-            // Saudações ao usuário
             System.Console.WriteLine ("==========================================");
             System.Console.WriteLine ("Bem-vindo à calculadora de palavras primas");
             System.Console.WriteLine ("==========================================");

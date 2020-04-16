@@ -9,3 +9,9 @@ C:\Users\48060493876\Documents\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3
 C:\Users\48060493876\Documents\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.AssemblyInfo.cs
 C:\Users\48060493876\Documents\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.dll
 C:\Users\48060493876\Documents\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.pdb
+C:\Users\danil\Documents\CODING-CHALLENGES\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.csprojAssemblyReference.cache
+C:\Users\danil\Documents\CODING-CHALLENGES\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.csproj.CoreCompileInputs.cache
+C:\Users\danil\Documents\CODING-CHALLENGES\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.AssemblyInfoInputs.cache
+C:\Users\danil\Documents\CODING-CHALLENGES\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.AssemblyInfo.cs
+C:\Users\danil\Documents\CODING-CHALLENGES\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.dll
+C:\Users\danil\Documents\CODING-CHALLENGES\Dojo Puzzle\Palavras Primas\obj\Debug\netcoreapp3.0\Palavras Primas.pdb

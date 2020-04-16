@@ -7,9 +7,9 @@ namespace Palavras_Primas {
         static void Main (string[] args) {
             // Cria uma array com o alfabeto maiúsculo e maiúsculo
             char[] arrayAlfabeto = new char[52];
+            int soma;
 
-            int i = 1;
-
+            int i = 0;
             for (char c = 'a'; c < 'z'; c++) {
                 arrayAlfabeto[i] = c;
                 i++;
@@ -19,8 +19,6 @@ namespace Palavras_Primas {
                 arrayAlfabeto[i] = c;
                 i++;
             }
-
-            string[] letrasAcentuadas = "á,à,â,ó,ô,õ,í,é".Split (",");
 
             // Saudações ao usuário
             System.Console.WriteLine ("==========================================");
@@ -38,7 +36,7 @@ namespace Palavras_Primas {
                     case "s":
                         bool usuarioQuerFicarMenu = true;
                         do {
-                            LimparTela ();
+                            Console.Clear ();
                             System.Console.WriteLine ("O que você quer fazer?");
                             System.Console.WriteLine ();
                             System.Console.WriteLine ("Digite o número correspondente e pressione ENTER.");
@@ -49,18 +47,29 @@ namespace Palavras_Primas {
                             switch (optMenu) {
                                 case "1":
                                     System.Console.WriteLine ("Digite uma palavra qualquer.");
-                                    string letras = Console.ReadLine ();
+                                    string input = Console.ReadLine ();
+                                    char[] arrayInput = input.ToCharArray ();
 
-                                    char[] arrayLetras = letras.ToCharArray ();
+                                    foreach (var letraInput in arrayInput) {
+                                        for (i = 0; i < arrayAlfabeto.Length; i++) {
+                                            if (letraInput == letraAlfabeto) {
+                                                soma += (i + 1);
+                                            }
+                                        }
+                                    }
 
+                                    var resultado = (soma % 2) == 0 ? "é primo" : "não é primo";
+
+                                    System.Console.WriteLine ("Somando o que você digitou, posso dizer que {0}, {1}.", input, resultado);
+                                    System.Console.WriteLine ("Aperte ENTER para continuar");
+                                    Console.ReadLine ();
                                     break;
 
                                 case "2":
                                     System.Console.WriteLine ("Cada letra tem seu respectivo valor.");
                                     System.Console.WriteLine ("'a' é 1, 'b' é 2, z é 26, 'A' é 27 e assim por diante.");
                                     System.Console.WriteLine ("A calculadora vai somar todas as letras de uma frase e,");
-                                    System.Console.WriteLine ("depois, irá checar se a palavra é prima ou não. ");
-                                    System.Console.WriteLine ();
+                                    System.Console.WriteLine ("depois, irá checar se a palavra é prima ou não.\n");
                                     System.Console.WriteLine ("Aperte ENTER para continuar");
                                     Console.ReadLine ();
                                     break;
@@ -80,21 +89,13 @@ namespace Palavras_Primas {
                         break;
 
                     default:
-                        LimparTela ();
+                        Console.Clear ();
                         System.Console.WriteLine ("Você precisa escolher uma opção!");
                         System.Console.WriteLine ();
                         System.Console.WriteLine ("Digite 's' para acessar o menu' e 'n' para fechar'");
                         break;
                 }
             }
-        }
-        public static void LimparTela () {
-            System.Console.Clear ();
-        }
-
-        public static char ChecaAcento () {
-            char palavraSemAcento = 'á';
-            return palavraSemAcento;
         }
     }
 }

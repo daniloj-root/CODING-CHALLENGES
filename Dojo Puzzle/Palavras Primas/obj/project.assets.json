@@ -8,11 +8,16 @@
     ".NETCoreApp,Version=v3.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "/home/danilokun/.nuget/packages/": {}
+=======
+    "C:\\Users\\danil\\.nuget\\packages\\": {}
+>>>>>>> 04eda018e58745a49753a079dbb2808a23be4f14
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "/home/danilokun/Documents/conumdrum/Dojo Puzzle/Palavras Primas/Palavras Primas.csproj",
       "projectName": "Palavras Primas",
       "projectPath": "/home/danilokun/Documents/conumdrum/Dojo Puzzle/Palavras Primas/Palavras Primas.csproj",
@@ -21,6 +26,17 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/danilokun/.nuget/NuGet/NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\danil\\Documents\\CODING-CHALLENGES\\Dojo Puzzle\\Palavras Primas\\Palavras Primas.csproj",
+      "projectName": "Palavras Primas",
+      "projectPath": "C:\\Users\\danil\\Documents\\CODING-CHALLENGES\\Dojo Puzzle\\Palavras Primas\\Palavras Primas.csproj",
+      "packagesPath": "C:\\Users\\danil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\danil\\Documents\\CODING-CHALLENGES\\Dojo Puzzle\\Palavras Primas\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\danil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+>>>>>>> 04eda018e58745a49753a079dbb2808a23be4f14
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -57,12 +73,23 @@
             "version": "[3.0.1, 3.0.1]"
           },
           {
+<<<<<<< HEAD
             "name": "Microsoft.NETCore.App.Host.linux-x64",
+=======
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+>>>>>>> 04eda018e58745a49753a079dbb2808a23be4f14
             "version": "[3.0.3, 3.0.3]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
             "version": "[3.0.0, 3.0.0]"
+<<<<<<< HEAD
+=======
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.0.0, 3.0.0]"
+>>>>>>> 04eda018e58745a49753a079dbb2808a23be4f14
           }
         ],
         "frameworkReferences": {
@@ -70,7 +97,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+>>>>>>> 04eda018e58745a49753a079dbb2808a23be4f14
       }
     }
   }

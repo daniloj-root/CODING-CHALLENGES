@@ -46,6 +46,38 @@ namespace NuvemDeCinzas.Libraries {
             }
         }
 
+        protected void PreencherAeroportos () {
+            Random random = new Random (Guid.NewGuid ().GetHashCode ());
+            var contadorAeroportos = 0;
+
+            while (true) {
+                for (var xIndex = 0; xIndex < xLength; xIndex++) {
+                    for (var yIndex = 0; yIndex < yLength; yIndex++) {
+                        if ((Coordenadas[xIndex, yIndex] == RetornarValor (TipoQuadrado.VAZIO)) && ((random.Next (0, 101)) <= chanceAeroportoAparecer)) // Define a chance de um vazio ser preenchido por um aeroporto
+                        {
+                            Coordenadas[xIndex, yIndex] = RetornarValor (TipoQuadrado.AEROPORTO);
+                            contadorAeroportos++;
+                        }
+                    }
+                    if (contadorAeroportos >= indiceAeroportos) // Mantem a quantidade de aeroportos perto do indice
+                    {
+                        break;
+                    }
+                }
+                break;
+            }
+        }
+
+        protected void AvancarDia () {
+            var coordenadasLegado = CriarLegadoCoordenadas ();
+            for (var yIndex = 0; yIndex < yLength; yIndex++) {
+                for (var xIndex = 0; xIndex < xLength; xIndex++) {
+                    if (coordenadasLegado[xIndex, yIndex] == RetornarValor (TipoQuadrado.NUVEM)) {
+                        PreencherVizinhosComNuvens (xIndex, yIndex);
+                    }
+                }
+            }
+        }
         private bool MoverNuvem (int x, int y) {
             Random random = new Random (Guid.NewGuid ().GetHashCode ());
             switch (random.Next (1, 5)) { // Decide pra qual direcao a nuvem vai
@@ -81,7 +113,7 @@ namespace NuvemDeCinzas.Libraries {
         // Poderia ter sido feito com switch, no modelo PodeMover(int x, int y, string direcao)
         // mas achei que deixaria mais complicado do que ajudaria na legibilidade
         private bool PodeMover (int x, int y) {
-            if (x != 0 && x != (xLength - 1) && y != 0 && y != (yLength - 1)) {
+            if (x != -1 && x != xLength && y != -1 && y != yLength ) {
                 if (Coordenadas[x, y] == RetornarValor (TipoQuadrado.VAZIO)) {
                     return true;
                 }
@@ -89,37 +121,16 @@ namespace NuvemDeCinzas.Libraries {
             return false;
         }
 
-        protected void PreencherAeroportos () {
-            Random random = new Random (Guid.NewGuid ().GetHashCode ());
-            var contadorAeroportos = 0;
-
-            while (true) {
-                for (var xIndex = 0; xIndex < xLength; xIndex++) {
-                    for (var yIndex = 0; yIndex < yLength; yIndex++) {
-                        if ((Coordenadas[xIndex, yIndex] == RetornarValor (TipoQuadrado.VAZIO)) && ((random.Next (0, 101)) <= chanceAeroportoAparecer)) // Define a chance de um vazio ser preenchido por um aeroporto
-                        {
-                            Coordenadas[xIndex, yIndex] = RetornarValor (TipoQuadrado.AEROPORTO);
-                            contadorAeroportos++;
-                        }
-                    }
-                    if (contadorAeroportos >= indiceAeroportos) // Mantem a quantidade de aeroportos perto do indice
-                    {
-                        break;
-                    }
-                }
-                break;
-            }
-        }
-
-        protected void AvancarDia () {
-            var coordenadasLegado = CriarLegadoCoordenadas ();
+        protected void DesenharCoordenadas () {
+            Console.WriteLine ($"======= DIA {diasTotais} ======");
             for (var yIndex = 0; yIndex < yLength; yIndex++) {
+                string output = "";
                 for (var xIndex = 0; xIndex < xLength; xIndex++) {
-                    if (coordenadasLegado[xIndex, yIndex] == RetornarValor (TipoQuadrado.NUVEM)) {
-                        PreencherVizinhosComNuvens (xIndex, yIndex);
-                    }
+                    output += Coordenadas[xIndex, yIndex];
                 }
+                Console.WriteLine (output);
             }
+            Console.WriteLine ("=====================");
         }
 
         //// Cria um legado das posicões preenchidas
@@ -148,17 +159,6 @@ namespace NuvemDeCinzas.Libraries {
                 Coordenadas[xIndex, yIndex + 1] = RetornarValor (TipoQuadrado.NUVEM);;
         }
 
-        protected void DesenharCoordenadas () {
-            Console.WriteLine ($"======= DIA {diasTotais} ======");
-            for (var yIndex = 0; yIndex < yLength; yIndex++) {
-                string output = "";
-                for (var xIndex = 0; xIndex < xLength; xIndex++) {
-                    output += Coordenadas[xIndex, yIndex];
-                }
-                Console.WriteLine (output);
-            }
-            Console.WriteLine ("=====================");
-        }
 
         protected char RetornarValor (TipoQuadrado Tipo) {
             return Tipo.valorCoordenada;

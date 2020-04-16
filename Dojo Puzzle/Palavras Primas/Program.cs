@@ -38,7 +38,7 @@ namespace Palavras_Primas {
                     case "s":
                         bool usuarioQuerFicarMenu = true;
                         do {
-                            LimparTela ();
+                            Console.Clear();
                             System.Console.WriteLine ("O que você quer fazer?");
                             System.Console.WriteLine ();
                             System.Console.WriteLine ("Digite o número correspondente e pressione ENTER.");
@@ -80,16 +80,13 @@ namespace Palavras_Primas {
                         break;
 
                     default:
-                        LimparTela ();
+                        Console.Clear();
                         System.Console.WriteLine ("Você precisa escolher uma opção!");
                         System.Console.WriteLine ();
                         System.Console.WriteLine ("Digite 's' para acessar o menu' e 'n' para fechar'");
                         break;
                 }
             }
-        }
-        public static void LimparTela () {
-            System.Console.Clear ();
         }
 
         public static char ChecaAcento () {

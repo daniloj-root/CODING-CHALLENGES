@@ -45,7 +45,7 @@ namespace NuvemDeCinzas {
 
                                     break;
                             }
-                        } while (usuarioQuerFicarMenu == true);
+                        } while (usuarioQuerF icarMenu == true);
                         break;
                     case "n":
                         usuarioQuerUsar = false;
